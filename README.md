@@ -63,7 +63,9 @@ Run the TestRunner.java either through:
 
 ![RunTestRunner](https://user-images.githubusercontent.com/58343393/73690562-a37ee180-469e-11ea-9afe-3f32bf8a02f0.png)
 
-`Below are the expect results`
+Below are the expect results
+
+![SuccessfulJUnitTest](https://user-images.githubusercontent.com/58343393/73691338-294f5c80-46a0-11ea-84da-87e42c661031.png)
 
 
 ### Break down into end to end tests
@@ -86,23 +88,15 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Selenium](https://selenium.dev/) - Automating Web Applications for Testing Purposes
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [JUnit](https://junit.org/junit5/) - Testing Framework for Java
+* [Cucumber](https://cucumber.io/) - Software Tool for Behavior-Driven Development.
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Alexander Sarancha** - *Initial work* - [Sasha Sarancha](https://github.com/SashaSaran)
 
 ## License
 
@@ -113,7 +107,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
-Firefox browswer should Open and close three times
-each time it opens it should do something slightly different
-Right of the box should say all junit test have passed
