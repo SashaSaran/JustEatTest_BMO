@@ -1,10 +1,23 @@
-# JustEatTest_BMO
+#JustEatTest
 
-Hi this is the Just Eat Test Website
+This project uses Selenium, and Cucumber to test a three scenarios on the website https://www.just-eat.co.uk/
 
-I can currently going to make a better readMe on github but this is simply to see to test out the code
+## Getting Started
 
-NOTE: This was done on a linux computer with an eclipse IDE
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Eclipse Download or the Ide of your choice
+```
+https://www.eclipse.org/downloads/
+```
+Latest Java Version
+```
+https://www.eclipse.org/downloads/
+```
+
+
 
 BASIC NEEDS
 Have maven installed
