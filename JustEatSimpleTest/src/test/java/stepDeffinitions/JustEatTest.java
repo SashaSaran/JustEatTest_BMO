@@ -5,10 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.ProfilesIni;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -43,8 +40,8 @@ public class JustEatTest {
 		driver =  new FirefoxDriver();
 		driver.get("https://www.just-eat.co.uk/");
 		driver.findElement(By.xpath("/html/body/app/div/footer/div[1]/div[2]/ul/li[2]/a")).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("/html/body/div[1]/div/main/div[2]/div[2]/div/div/div/form/div/div/label/input")).sendKeys(string);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElement(By.className("Form_c-search-input_2hlRP")).sendKeys(string);
 		
 }
 
@@ -59,7 +56,7 @@ public class JustEatTest {
 	}
 	@When("I search for indian restaurants")
 	public void i_search_for_indian_restaurants() {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.className("Form_c-search-btn_1EEhL")).click();
 	}
 
