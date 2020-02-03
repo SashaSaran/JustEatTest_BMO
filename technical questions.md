@@ -17,6 +17,7 @@ Depends of the application, but I would use a similar frameworld like selenium t
 I would allow the user to input other values other than the postal code.
 
 5.Please describe yourself in json
+```
 
 {
 	"FristName": "Alexander",
@@ -49,3 +50,4 @@ I would allow the user to input other values other than the postal code.
 
 	}
 }
+```
