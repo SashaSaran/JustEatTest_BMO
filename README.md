@@ -1,4 +1,4 @@
-#JustEatTest
+# JustEatTest
 
 This project uses Selenium, and Cucumber to test a three scenarios on the website https://www.just-eat.co.uk/
 
@@ -26,8 +26,15 @@ https://maven.apache.org/download.cgi
 
 This will go through step by step on how to run the program in eclipse
 
-#First
+Download the Repository, and extract the zip file.
+
 ![Extract](https://user-images.githubusercontent.com/58343393/73685242-d079c700-4693-11ea-9d35-ec7e957e957b.png)
+
+Open up Eclipse(or your IDE of choice) and click on
+
+` file - > import `
+
+![File](https://user-images.githubusercontent.com/58343393/73685599-6b72a100-4694-11ea-957c-f977fbdda14b.png)
 
 
 ### Break down into end to end tests
