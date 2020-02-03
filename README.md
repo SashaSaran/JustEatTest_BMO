@@ -12,11 +12,14 @@ Eclipse Download or the Ide of your choice
 ```
 https://www.eclipse.org/downloads/
 ```
-Latest Java Version
+Latest Java Version, you may need to look up a tutorial on how to install java on your machine depending on your OS
 ```
-https://www.eclipse.org/downloads/
+https://www.java.com/en/download
 ```
-
+Maven
+```
+https://maven.apache.org/download.cgi
+```
 
 
 BASIC NEEDS
