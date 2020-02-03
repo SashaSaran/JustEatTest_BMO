@@ -303,10 +303,6 @@ public void i_should_see_some_restaurants_in(String string) {
 
 * **Alexander Sarancha** - *Initial work* - [Sasha Sarancha](https://github.com/SashaSaran)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 * Countless Youtube Videos
