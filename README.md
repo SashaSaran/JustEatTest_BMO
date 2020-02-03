@@ -70,11 +70,11 @@ Below are the expect results
 
 ## Feature with 3 Scenarios
 
+Note: @Then are using the same Java Code as all three scenarios should end at the same result
+
 ### First Scenario
 
-First Scenario was given within the assignement, it was implemented within cumcumber as seen below
-
-Note: @Then are using the same Java Code as all three scenarios should end at the same result
+First Scenario was given within the assignement, it was implemented within cumcumber and can be found within the `features.features`
 
 ```
   @First
@@ -84,7 +84,7 @@ Note: @Then are using the same Java Code as all three scenarios should end at th
     Then I should see some restaurants in "AR51 1AA"
 ```
 
-The following java code was coded to meet the requirments, this code can be found in `JustEatTest.java`:
+The following java code was coded to meet the requirments given by the cucumber code, this code can be found in `JustEatTest.java`:
 
 #### Given
 
@@ -144,7 +144,7 @@ public void i_should_see_some_restaurants_in(String string) {
 
 ### Second Scenario
 
-The Second Scenario was made by me, I decided that I would be a good idea to check weather or not a similar address can be chosen after a user picks their brand of choice (for this test KFC was chosen)
+The Second Scenario was made by me, I decided that I would be a good idea to check weather or not a similar address can be chosen after a user picks their brand of choice (for this test KFC was chosen). This was implemented using cucumber, it can be found within the `features.features`
 
 ```
   @Second
@@ -154,11 +154,71 @@ The Second Scenario was made by me, I decided that I would be a good idea to che
     Then I should see some restaurants in "AR51 2AA"
   
 ```
+The following java code was coded to meet the requirments given by the cucumber code, this code can be found in `JustEatTest.java`:
+
+#### Given
+```
+//this class opens firefox, 
+	//goes to just-eat.co.uk
+	//clicks on KFC
+	//takes string input (needs to be a uk valid postal code)
+	// places the string textbox
+	@Given("I want food from KFC in {string}")
+	public void i_want_food_from_KFC_in(String string) throws InterruptedException {
+		//launches firefox
+		driver =  new FirefoxDriver();
+		//goes to just-eat.co.uk
+		driver.get("https://www.just-eat.co.uk/");
+		//clicks on the KFC related link
+		driver.findElement(By.xpath("/html/body/app/div/footer/div[1]/div[4]/ul/li[1]/a")).click();
+		///waits 10 seconds for the page to load, this may fail depending on the connection of either website or user
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//places the input string within the search textbox in just-eat.co.uk
+		driver.findElement(By.xpath("/html/body/div[1]/div/main/div[2]/div[2]/div/div/div/form/div/div/label/input")).sendKeys(string);
+		
+		
+}
+```
+#### When
+
+```
+//this clicks on search button after the given has happen for I_want_food from KFC_in
+	//It also waits 5 seconds to ensure it that enough times has passsed for the page to load
+	@When("I search for KFC restaurants")
+	public void i_search_for_KFC_restaurants() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.className("Form_c-search-btn_1EEhL")).click();
+	}
+```
+
+#### Then
+
+```
+//this checks whether or not it was able to reach the final page in all the scenarios, 
+	//it prints passed when it passes the scenarios
+	//it prints fail when it fails the scenarios
+	//it close the browser at the very end
+	@Then("I should see some restaurants in {string}")
+public void i_should_see_some_restaurants_in(String string) {
+	    if(driver.findElement(By.xpath("/html/body/main/main/div/div[2]")).isEnabled()) {
+	    	//PASSED
+	    	System.out.println("Passed");
+	    }
+	    else {
+	    	//FAILED
+	    	System.err.println("failed");
+	    }
+	    //CLOSES FIREFOX
+	    driver.close();
+
+	}
+
+```
 
 
 ### Third Scenario
 
-The Third and last Scenario was also made by me, I decided that I would be a good idea to check weather or not a similar address can be chosen after a user picks their cuisine of choice (for this test indian cuisine was chosen)
+The Third and last Scenario was also made by me, I decided that I would be a good idea to check weather or not a similar address can be chosen after a user picks their cuisine of choice (for this test indian cuisine was chosen). This was implemented using cucumber. it can be found within the `features.features`
 
 ```
   @Third
@@ -168,19 +228,68 @@ The Third and last Scenario was also made by me, I decided that I would be a goo
     Then I should see some restaurants in "AR51 3AA"
   
 ```
+The following java code was coded to meet the requirments given by the cucumber code, this code can be found in `JustEatTest.java`:
 
-
-### And coding style tests
-
-Explain what these tests test and why
+#### Given
+```
+//this class opens firefox, 
+	//goes to just-eat.co.uk
+	//clicks on Indian Cuisine
+	//takes string input (needs to be a uk valid postal code)
+	// places the string textbox
+	@Given("I want indian food in {string}")
+	public void i_want_indian_food_in(String string) throws InterruptedException {
+		//launches firefox
+		driver =  new FirefoxDriver();
+		//goes to just-eat.co.uk
+		driver.get("https://www.just-eat.co.uk/");
+		//clicks on the indian Cuisine related link
+		driver.findElement(By.xpath("/html/body/app/div/footer/div[1]/div[2]/ul/li[2]/a")).click();
+		//waits 10 seconds for the page to load, this may fail depending on the connection of either website or user
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//places the input string within the search textbox in just-eat.co.uk
+		driver.findElement(By.className("Form_c-search-input_2hlRP")).sendKeys(string);
+		
+}
+		
+		
+}
+```
+#### When
 
 ```
-Give an example
+//this clicks on search button after the given has happen for I_want_food from KFC_in
+	//It also waits 5 seconds to ensure it that enough times has passsed for the page to load
+	@When("I search for indian restaurants")
+	public void i_search_for_indian_restaurants() {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElement(By.className("Form_c-search-btn_1EEhL")).click();
+	}
 ```
 
-## Deployment
+#### Then
 
-Add additional notes about how to deploy this on a live system
+```
+//this checks whether or not it was able to reach the final page in all the scenarios, 
+	//it prints passed when it passes the scenarios
+	//it prints fail when it fails the scenarios
+	//it close the browser at the very end
+	@Then("I should see some restaurants in {string}")
+public void i_should_see_some_restaurants_in(String string) {
+	    if(driver.findElement(By.xpath("/html/body/main/main/div/div[2]")).isEnabled()) {
+	    	//PASSED
+	    	System.out.println("Passed");
+	    }
+	    else {
+	    	//FAILED
+	    	System.err.println("failed");
+	    }
+	    //CLOSES FIREFOX
+	    driver.close();
+
+	}
+
+```
 
 ## Built With
 
@@ -200,6 +309,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Countless Youtube Videos
+* StackOverflow
+* Internet Searches
