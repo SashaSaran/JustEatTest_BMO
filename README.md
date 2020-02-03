@@ -16,51 +16,68 @@ Latest Java Version, you may need to look up a tutorial on how to install java o
 ```
 https://www.java.com/en/download
 ```
-Maven
+Maven, A tutorial may be needed depending on your OS
 ```
 https://maven.apache.org/download.cgi
 ```
 
 
-BASIC NEEDS
-Have maven installed
-Have latest Java installed
-Have cucumber plugin installed (I had it for eclipse, its not nessary but it helps)
-Don't use a vpn (just-eat.co.uk doesn't allow for vpn)
-also firefox was used for selenium so you might need to install firefox, but I don't think you have to
+## Running the Program
+
+This will go through step by step on how to run the program in eclipse
+
+#First
+![Extract](https://user-images.githubusercontent.com/58343393/73685242-d079c700-4693-11ea-9d35-ec7e957e957b.png)
 
 
-The Project is called JustEatSimpleTest
-#Files of Interest
+### Break down into end to end tests
+
+Explain what these tests test and why
 
 
-#pom.xml
-Has all the dependicies
-if error, delete the depencies one at a time to see which one has an error
-I think there might be a bug with some of the dependicies relating to windows 10, but 
-if you have everything installed and update it should be fine on windows 10
 
-#scr/test/resouces/features.features
-This is a cucumber file that is called within the application
-It has three scenarios
-First one is the one that was asked
-And the other two were one's I made up that I believe would help expand the testing
+### And coding style tests
 
-#scr/test/java/TestRunner.java
-This runs the Junit test, the test can also be runned from the features.features, but this
-is recommended as their is a details about the test
+Explain what these tests test and why
 
-#scr/test/java/JustEatTest.java
-This opperates the given command from the features.features files, and actually does the commands
-within codeing language, it is called by the TestRunner.java class and features.features class
+```
+Give an example
+```
 
+## Deployment
 
-#RUNNING THE PROGRAM
-Unzip the JustEatSimpleTest.Zip
-Open the project within your ide
-Right-CLick on TestRunner.java from your Ide
-Run as Junit
-Watch the results
+Add additional notes about how to deploy this on a live system
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
+
 Firefox browswer should Open and close three times
 each time it opens it should do something slightly different
 Right of the box should say all junit test have passed
