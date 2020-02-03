@@ -68,10 +68,106 @@ Below are the expect results
 ![SuccessfulJUnitTest](https://user-images.githubusercontent.com/58343393/73691338-294f5c80-46a0-11ea-84da-87e42c661031.png)
 
 
-### Break down into end to end tests
+## Feature with 3 Scenarios
 
-Explain what these tests test and why
+### First Scenario
 
+First Scenario was given within the assignement, it was implemented within cumcumber as seen below
+
+Note: @Then are using the same Java Code as all three scenarios should end at the same result
+
+```
+  @First
+  Scenario: Search for restaurants in an area
+    Given I want food in "AR51 1AA"
+    When I search for restaurants
+    Then I should see some restaurants in "AR51 1AA"
+```
+
+The following java code was coded to meet the requirments, this code can be found in `JustEatTest.java`:
+
+#### Given
+
+```
+	//this class opens firefox,
+	//goes to just-eat.co.uk
+	//takes string input (needs to be a uk valid postal code)
+	// places the string textbox
+	@Given("I want food in {string}")
+	public void i_want_food_in(String string) {
+		WebDriverManager.firefoxdriver().setup();
+		//launches firefox
+		driver = new FirefoxDriver();
+		//goes to just-eat.co.uk
+		driver.get("https://www.just-eat.co.uk/");
+		//places the input string within the search textbox in just-eat.co.uk
+		driver.findElement(By.xpath("/html/body/app/div/div/div[1]/div[2]/form/div[1]/div/label/input")).sendKeys(string);
+
+	}
+
+```
+
+#### When
+
+```
+//this clicks on search button after the given has happen for I_want_food_in
+	@When("I search for restaurants")
+	public void i_search_for_restaurants() {
+		driver.findElement(By.xpath("/html/body/app/div/div/div[1]/div[2]/form/div/button")).click();
+	}
+
+```
+
+#### Then
+
+```
+//this checks whether or not it was able to reach the final page in all the scenarios, 
+	//it prints passed when it passes the scenarios
+	//it prints fail when it fails the scenarios
+	//it close the browser at the very end
+	@Then("I should see some restaurants in {string}")
+public void i_should_see_some_restaurants_in(String string) {
+	    if(driver.findElement(By.xpath("/html/body/main/main/div/div[2]")).isEnabled()) {
+	    	//PASSED
+	    	System.out.println("Passed");
+	    }
+	    else {
+	    	//FAILED
+	    	System.err.println("failed");
+	    }
+	    //CLOSES FIREFOX
+	    driver.close();
+
+	}
+
+```
+
+### Second Scenario
+
+The Second Scenario was made by me, I decided that I would be a good idea to check weather or not a similar address can be chosen after a user picks their brand of choice (for this test KFC was chosen)
+
+```
+  @Second
+  Scenario: Search for restaurants in an area and picking a specific brand
+    Given I want food from KFC in "AR51 2AA"
+    When I search for KFC restaurants
+    Then I should see some restaurants in "AR51 2AA"
+  
+```
+
+
+### Third Scenario
+
+The Third and last Scenario was also made by me, I decided that I would be a good idea to check weather or not a similar address can be chosen after a user picks their cuisine of choice (for this test indian cuisine was chosen)
+
+```
+  @Third
+  Scenario: Search for restaurants in an area and picking a specific cuisine
+    Given I want indian food in "AR51 3AA"
+    When I search for indian restaurants
+    Then I should see some restaurants in "AR51 3AA"
+  
+```
 
 
 ### And coding style tests
