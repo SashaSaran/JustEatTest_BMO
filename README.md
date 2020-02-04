@@ -1,6 +1,41 @@
+# QA Engineering Challenge
+
+Just EAT has a website available at https://just-eat.co.uk that you can use to find takeaway restaurants in a postcode area.
+
+`1. Write the step definitions for the below scenario`
+```
+Feature: Use the website to find restaurants
+	So that  I can order food
+	As a hungry customer
+	I want to be able to find restaurants in my area
+Scenario: Search for restaurants in an area
+    Given I want food in "AR51 1AA"
+    When I search for restaurants
+    Then I should see some restaurants in "AR51 1AA"
+```
+`2. Add two more scenarios, which coressponding step definitions, which you feel would enhance the test coverage of the site.`
+
+#### First Added Scenario
+```
+Scenario: Search for restaurants in an area and picking a specific brand
+    Given I want food from KFC in "AR51 2AA"
+    When I search for KFC restaurants
+    Then I should see some restaurants in "AR51 2AA"
+  
+```
+#### Second Added Scenario
+```
+Scenario: Search for restaurants in an area and picking a specific cuisine
+    Given I want indian food in "AR51 3AA"
+    When I search for indian restaurants
+    Then I should see some restaurants in "AR51 3AA"
+  
+```
 # JustEatTest
 
 This project uses Selenium, and Cucumber to test a three scenarios on the website https://www.just-eat.co.uk/
+
+
 
 ## Getting Started
 
