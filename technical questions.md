@@ -19,9 +19,9 @@ Depends of the application, but I would use a similar frameworld like selenium t
 `have you ever had to do this?`No I have not done this before.
 
 # 4. 
-`How would you improve hte cusomer experience of the JUST EAT website?`
+`How would you improve the customer experience of the JUST EAT website?`
 
-I would allow the user to input other values other than the postal code. 
+I would allow the user to input other values other than the postal code: 
 * Street number 
 * Interesction 
 * ect.
