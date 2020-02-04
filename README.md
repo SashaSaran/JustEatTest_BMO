@@ -1,6 +1,6 @@
 # QA Engineering Challenge
 
-Just EAT has a website available at [just eat uk]https://just-eat.co.uk that you can use to find takeaway restaurants in a postcode area.
+Just EAT has a website available at [just eat uk](https://just-eat.co.uk) that you can use to find takeaway restaurants in a postcode area.
 
 `1. Write the step definitions for the below scenario`
 ```
@@ -33,8 +33,8 @@ Scenario: Search for restaurants in an area and picking a specific cuisine
 ```
 # JustEatTest
 
-This project uses Selenium, and Cucumber to test a three scenarios on the website [just eat uk]https://just-eat.co.uk
-# NOTE: SOME OF THESE SCENARIO MAY FAIL WHEN CHANGES TO [just eat uk]https://just-eat.co.uk, The FRIST TEST SHOULD RELAIBLY ALWAYS PASS.
+This project uses Selenium, and Cucumber to test a three scenarios on the website [just eat uk](https://just-eat.co.uk)
+# NOTE: SOME OF THESE SCENARIO MAY FAIL WHEN CHANGES TO [just eat uk](https://just-eat.co.uk), The FRIST TEST SHOULD RELAIBLY ALWAYS PASS.
 
 
 
