@@ -30,10 +30,15 @@ I would allow the user to input other values other than the postal code.
 `Please describe yourself in json`
 
 ```
-
 {
 	"FristName": "Alexander",
 	"LastName": "Sarancha",
+	"Qualities": [
+		"HardWorking",
+		"Always Willing To Learn",
+		"Optimist"
+
+	],
 	"School": {
 		"Name": "Ryerson University",
 		"Major": "Computer Engineering",
@@ -42,7 +47,10 @@ I would allow the user to input other values other than the postal code.
 	"Employer": "TCS",
 	"Languages": {
 		"Programing": [{
-				"name": "Java"
+				"Java": {
+					"Testing Web Application": "Selenium",
+					"Behavior-Driven Development": "Cucumber"
+				}
 			}, {
 				"name": "Python"
 			}, {
