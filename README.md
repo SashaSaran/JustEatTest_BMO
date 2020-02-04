@@ -336,7 +336,7 @@ public void i_should_see_some_restaurants_in(String string) {
 
 ## Authors
 
-* **Alexander Sarancha** - *Initial work* - [Sasha Sarancha](https://github.com/SashaSaran)
+* **Alexander Sarancha** - *Sole Contributor* - [Sasha Sarancha](https://github.com/SashaSaran)
 
 ## Acknowledgments
 
