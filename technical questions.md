@@ -7,9 +7,10 @@ I spent about 2-5 hours on this test of actual codeing, it was not difficult per
 # 2.
 `What do you think is the most interesting trend in test automation?`
 
-The diffuculty of test automation, the learning curve to test application have become easier over the years with may different application have came and made it easier to:
-* Test application (ie:Selenium, and Junit)
-* Understand the testing (Cucumber/Gherkin)
+The diffuculty of test automation. The learning curve to test an application have become easier over the years with the introduction of Frameworks,Tools and other Software applications.
+For Example:
+* Test Web application -> (ie:Selenium, and Junit)
+* Understand the testing -> (Cucumber/Gherkin)
 
 # 3. 
 `How would you implement test automation in a legacy application? have you ever had to do this?`
