@@ -35,6 +35,8 @@ Scenario: Search for restaurants in an area and picking a specific cuisine
 
 This project uses Selenium, and Cucumber to test a three scenarios on the website https://www.just-eat.co.uk/
 
+# NOTE: SOME OF THESE SCENARIO MAY FAIL WHEN CHANGES TO https://www.just-eat.co.uk/ DUE TO LOCATION, The FRIST TEST SHOULD RELAIBLY ALWAYS PASS.
+
 
 
 ## Getting Started
