@@ -79,7 +79,7 @@ click browse, and browse to the location where you chose to extract said project
 
 ![Browse](https://user-images.githubusercontent.com/58343393/73689767-f6579980-469c-11ea-93ec-06e48b16f082.png)
 
-Click on JustEatSimpletest and press Ok, this the start location of the project.
+Click on JustEatTest folder and press Ok,(Note: this is the start location of the project, thus do not go any further than this.)
 
 ![SelectProject](https://user-images.githubusercontent.com/58343393/73689925-5c442100-469d-11ea-8bbe-0b2acc397ccf.png)
 
